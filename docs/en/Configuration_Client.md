@@ -48,7 +48,7 @@ HTTP static server addressing is recommended, because it is simple client deploy
 | clientIP                      | local IP  | Client local ip address, some machines will fail to recognize the client IP address, which needs to be enforced in the code |
 | instanceName                  | DEFAULT | Name of the client instance, Multiple producers and consumers created by the client actually share one internal instance (this instance contains network connection, thread resources, etc.). |
 | clientCallbackExecutorThreads | 4       | Number of communication layer asynchronous callback threads                                        |
-| pollNameServerInteval         | 30000   | Polling the Name Server interval in milliseconds                          |
+| pollNameServerInterval        | 30000   | Polling the Name Server interval in milliseconds                          |
 | heartbeatBrokerInterval       | 30000   | The heartbeat interval, in milliseconds, is sent to the Broker                         |
 | persistConsumerOffsetInterval | 5000    | The persistent Consumer consumes the progress interval in milliseconds         |
 
@@ -63,7 +63,7 @@ HTTP static server addressing is recommended, because it is simple client deploy
 | compressMsgBodyOverHowmuch       | 4096             | The message Body begins to compress beyond the size(the Consumer gets the message automatically unzipped.), unit of byte|
 | retryAnotherBrokerWhenNotStoreOK | FALSE            | If send message and return sendResult but sendStatus!=SEND_OK, Whether to resend |
 | retryTimesWhenSendFailed         | 2                | If send message failed, maximum number of retries, this parameter only works for synchronous send mode|
-| maxMessageSize                   | 4MB              | Client limit message size, over it may error. Server also limit so need to work with server |
+| maxMessageSize                   | 4MB              | Client limit message body size, over it may error. Server also limit so need to work with server |
 | transactionCheckListener         |                  | The transaction message looks back to the listener, if you want send transaction message, you must setup this
 | checkThreadPoolMinSize           | 1                | Minimum of thread in thread pool when Broker look back Producer transaction status                     |
 | checkThreadPoolMaxSize           | 1                | Maximum of thread in thread pool when Broker look back Producer transaction status                     |
